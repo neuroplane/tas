@@ -2,7 +2,7 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>Tab 1</ion-title>
+        <ion-title>wTab 1</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
@@ -16,11 +16,13 @@
       </ion-header>
 
       <ExploreContainer name="Tab 1 page" />
+      <IonButton />
     </ion-content>
   </ion-page>
 </template>
 
 <script setup lang="ts">
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonMenu, IonMenuButton, IonContent } from '@ionic/vue';
-import ExploreContainer from '@/components/ExploreContainer.vue';
+import ExploreContainer from '../components/ExploreContainer.vue';
+import IonButton from "../components/IonButton.vue";
 </script>
