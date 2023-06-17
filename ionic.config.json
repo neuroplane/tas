@@ -1,0 +1,8 @@
+{
+  "name": "tas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite",
+  "id": "eebdb60c"
+}
