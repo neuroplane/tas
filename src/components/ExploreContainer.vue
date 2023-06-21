@@ -1,13 +1,22 @@
 <template>
   <div id="container">
-    <strong>{{ name }}</strong>
-    <p>Exp1lore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="8" offset="2">
+          <strong>{{ name }}</strong>
+          <slot/>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
 </template>
 
 <script setup lang="ts">
+import { IonGrid, IonRow, IonCol } from '@ionic/vue';
+
 defineProps({
   name: String,
+  subname: String
 });
 </script>
 
@@ -21,19 +30,4 @@ defineProps({
   transform: translateY(-50%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-  color: #8c8c8c;
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
 </style>
