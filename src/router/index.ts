@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
 import TabsPage from '../views/TabsPage.vue'
-import LogIn from "@/views/LogIn.vue";
+import LogIn from "../views/LogIn.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -37,4 +37,4 @@ const router = createRouter({
   routes
 })
 
-export default router
+export default router;
