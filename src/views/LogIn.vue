@@ -6,10 +6,12 @@
         <ion-input size="200" type="text" class="ion-margin-bottom"  fill="outline" placeholder="User name"></ion-input>
         <ion-input type="password"  fill="outline" placeholder="Password"></ion-input>
         <ion-button id="open-toast" expand="block" @click="login">Log in</ion-button>
+        <ion-button expand="block" @click="api">Api Test</ion-button>
+
 
 
       </ExploreContainer>
-      <ion-toast trigger="open-toast" message="This toast will disappear after 5 seconds" :duration="5000"></ion-toast>
+      <ion-toast trigger="open-toast" message="This toast will disappear after 1 seconds" :duration="1000"></ion-toast>
 
     </ion-content>
 
@@ -27,12 +29,15 @@
 
   const state = reactive({ count: 0 })
 
+  function api(element: string) {
+    services.apitest("This is passed to api() from LogIn.vue" + element)
+  }
   function login() {
     services.login()
     state.count +=1
   }
   function init() {
-    console.log("--")
+    console.log("This function onMounted(init) is called from LogIn.vue")
   }
   onMounted(init)
 </script>
